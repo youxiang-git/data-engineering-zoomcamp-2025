@@ -8,10 +8,12 @@ Run docker with the `python:3.12.8` image in an interactive mode, use the entryp
 
 What's the version of `pip` in the image?
 
--   [x] 24.3.1
+-   24.3.1 &check;
 -   24.2.1
 -   23.3.1
 -   23.2.1
+
+![image](/screenshots/q1.png)
 
 ## Question 2. Understanding Docker networking and docker-compose
 
