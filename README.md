@@ -1,6 +1,9 @@
 # Module 1 Homework: Docker & SQL
 
-Submission by: youxiang-git
+## Submission by: youxiang-git
+
+**\* Note:** </br>
+I've checked the correct answers and provided links to the code files / scripts / SQL queries required to answer the questions
 
 ## Question 1. Understanding docker first run
 
@@ -51,13 +54,19 @@ volumes:
         name: vol-pgadmin_data
 ```
 
+If there are more than one answers, select only one of them
+
 -   postgres:5433
 -   localhost:5432
 -   db:5433
 -   postgres:5432
--   db:5432
+-   db:5432 &check;
 
-If there are more than one answers, select only one of them
+### Justification
+
+Reason being, when logging in with pgadmin, the hostname should be the container running the postgres service, in this case, it is the service name in the docker-compose.yaml file: `db`
+
+Also, since the docker-compose has a "shared" network space, the port required by pgadmin should be the container's exposed port: `5432`
 
 ## Prepare Postgres
 
@@ -95,7 +104,11 @@ Answers:
 -   104,802; 198,924; 109,603; 27,678; 35,189
 -   104,793; 201,407; 110,612; 27,831; 35,281
 -   104,793; 202,661; 109,603; 27,678; 35,189
--   104,838; 199,013; 109,645; 27,688; 35,202
+-   104,838; 199,013; 109,645; 27,688; 35,202 &check;
+
+### Justification
+
+Please see [q3.sql](q3.sql) for the queries executed to get the answers for Q3
 
 ## Question 4. Longest trip for each day
 
@@ -107,7 +120,11 @@ Tip: For every day, we only care about one single trip with the longest distance
 -   2019-10-11
 -   2019-10-24
 -   2019-10-26
--   2019-10-31
+-   2019-10-31 &check;
+
+### Justification
+
+Please see [q4.sql](q4.sql) for the queries executed to get the answers for Q4
 
 ## Question 5. Three biggest pickup zones
 
@@ -116,10 +133,14 @@ Which were the top pickup locations with over 13,000 in
 
 Consider only `lpep_pickup_datetime` when filtering by date.
 
--   East Harlem North, East Harlem South, Morningside Heights
+-   East Harlem North, East Harlem South, Morningside Heights &check;
 -   East Harlem North, Morningside Heights
 -   Morningside Heights, Astoria Park, East Harlem South
 -   Bedford, East Harlem North, Astoria Park
+
+### Justification
+
+Please see [q5.sql](q5.sql) for the queries executed to get the answers for Q5
 
 ## Question 6. Largest tip
 
@@ -132,9 +153,13 @@ Note: it's `tip` , not `trip`
 We need the name of the zone, not the ID.
 
 -   Yorkville West
--   JFK Airport
+-   JFK Airport &check;
 -   East Harlem North
 -   East Harlem South
+
+### Justification
+
+Please see [q6.sql](q6.sql) for the queries executed to get the answers for Q6
 
 ## Terraform
 

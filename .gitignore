@@ -1,0 +1,8 @@
+/.venv
+/ny_taxi_postgres_data
+/ny_green_trips_data
+
+*.parquet
+*.csv#
+*.csv
+*.csv.gz
